@@ -2,9 +2,6 @@
 /*
 	(c) 2012 - Juanma Orta - Coffeescript version
 	app.coffee
-	+ social.coffee
-    + maps.coffee
-    + forms.coffee
 	DO NOT edit the .js file
 */
 
@@ -13,7 +10,8 @@
 
 requirejs.config({
   paths: {
-    'jquery': 'lib/jquery-1.8.3.min'
+    'jquery': 'lib/jquery-1.8.3.min',
+    'date': 'lib/date'
   }
 });
 
