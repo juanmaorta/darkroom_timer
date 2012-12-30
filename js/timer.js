@@ -18,8 +18,11 @@ define(['jquery', 'date', 'util'], function(jquery, date, util) {
   _mins_field = null;
   _countdown = function() {
     _date.addSeconds(-1);
+    _ref_date.addSeconds(1);
     $(_mins_field).val(util.zerofill(_date.getMinutes()));
     $(_secs_field).val(util.zerofill(_date.getSeconds()));
+    $("#e_min").html(util.zerofill(_ref_date.getMinutes()));
+    $("#e_sec").html(util.zerofill(_ref_date.getSeconds()));
     if (_date.getSeconds() === 0 && _date.getMinutes() === 0) {
       clearInterval(_counter);
     }

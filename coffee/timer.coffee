@@ -16,10 +16,15 @@ define ['jquery', 'date', 'util'], (jquery, date, util) ->
 
 	_countdown = () ->
 		_date.addSeconds(-1)
+		_ref_date.addSeconds(1)
 
+		# display values
 		$(_mins_field).val(util.zerofill(_date.getMinutes()))
 		$(_secs_field).val(util.zerofill(_date.getSeconds()))
 		
+		$("#e_min").html(util.zerofill(_ref_date.getMinutes()))
+		$("#e_sec").html(util.zerofill(_ref_date.getSeconds()))
+
 
 		if _date.getSeconds() is 0 and _date.getMinutes() is 0
 			clearInterval(_counter)
