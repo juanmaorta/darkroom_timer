@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="./css/bootstrap.min.css" rel="stylesheet">
+		<link href="./css/style.css" rel="stylesheet">
+		<title>Darkroom Timer</title>
+	</head>
+	<body>
+		<div class="row-fluid">
+			<div class="span8">
+				<h2>Darkroom Timer</h2>
+				<form>
+					<div class="timercont">
+						<label>Developer
+							<input type="text" name="minutes" class="timedisplay" value="00" size="2" data-rel="timer1" />:<input type="text" class="timedisplay" name="seconds" data-rel="timer1" value="00" size="2" />
+							<button class="btn btn-success timer_start" data-rel="timer1">Start <i class="icon-play icon-white"></i></button>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<script language="Javascript" data-main="./js/app" src="./js/require.js" type="text/javascript"></script>
+	</body>
+</html>
